@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html >
+  <script >
+
+
+  function Sigma(x) {
+    var sum = 0;
+
+    for (var i = 0; i <= x; i++) {
+      sum = sum + i;
+
+    }
+
+    return sum;
+  }
+
+console.log(Sigma(3));
+
+
+function Factorial(x) {
+  var multiply = 1;
+
+  for (var i = 1; i <= x; i++) {
+
+    multiply *= i;
+
+  }
+
+  return multiply;
+}
+
+console.log(Factorial(5));
+
+
+function fibonacci(number) {
+  var a = 1;
+  var b = 1;
+  result = b;
+
+  for (var i = 1; i < number; i++) {
+    console.log(result);
+
+    result = a + b;
+    a = b;
+    b = result;
+  }
+
+}
+fibonacci(30);
+
+
+function SecondtoLast(array) {
+  if (array.length > 1) {
+
+    return array[array.length - 2];
+  } else {
+
+    return null;
+  }
+
+}
+
+console.log(SecondtoLast([42, true, 4, "Liam", 7]));
+
+
+function SecondtoLast(array, index) {
+  if (array.length > 1) {
+
+    return array[array.length - index];
+  } else {
+
+    return null;
+  }
+
+
+}
+
+console.log(SecondtoLast([5, 2, 3, 6, 4, 9, 7], 3));
+
+
+function secondLargest(array) {
+  var max = array[0];
+  var secondmax = array[0];
+
+  for (var i = 0; i < array.length; i++) {
+
+    if (array[i] > max) {
+      max = array[i];
+    }
+
+  }
+
+  for (var i = 0; i < array.length; i++) {
+
+    if (array[i] > secondmax && array[i] != max) {
+      secondmax = array[i];
+    }
+
+  }
+
+
+  return secondmax;
+}
+
+console.log(secondLargest([1, -6, 8, 55, 10]));
+
+
+function DoubleTrouble(array) {
+
+  var newArray = [];
+
+  for (var i = 0; i < array.length; i++) {
+
+    newArray.push(array[i]);
+    newArray.push(array[i]);
+  }
+  return newArray;
+
+}
+
+console.log(DoubleTrouble([4, "Ulysses", 42, false])); 
+</script> 
+</html>
